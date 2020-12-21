@@ -149,12 +149,12 @@
           (let-alist (forge--topic-template
                       (forge-get-repository t)
                       (if source 'forge-pullreq 'forge-issue))
-            (insert .text)
+            ;; (insert .text)
             (if source
                 (progn
                   (goto-char (point-min))
                   (magit-rev-insert-format "# %B" source)
-                  (insert "\n----\n\n")
+                  ;; (insert "\n----\n\n")
                   (goto-char 3))
               (goto-char (or .position (point-min)))))))
       buf)))
